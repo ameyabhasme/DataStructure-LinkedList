@@ -11,5 +11,7 @@ public interface OperationsInterface {
 	public OperationsInterface addAtNthPos(OperationsInterface list, int data, int pos);
 	
 	public void deleteFirst();
+	
+	public void deleteLast();
 
 }

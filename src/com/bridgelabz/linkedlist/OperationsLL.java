@@ -72,4 +72,19 @@ public class OperationsLL implements OperationsInterface {
 			temp.next = null;
 		}
 	}
+
+	@Override
+	public void deleteLast() {
+		if (head == null) {
+			System.out.println("List is Empty.");
+		} else {
+			Node last = head;
+			Node temp = head;
+			while (temp.next != null) {
+				last = temp;
+				temp = temp.next;
+			}
+			last.next = null;
+		}
+	}
 }
