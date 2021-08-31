@@ -6,9 +6,10 @@ public class MyLinkedList {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Single LinkedList!");
 		list.addFirst(list, 56);
+		list.addLast(list, 30);
 		list.addLast(list, 70);
-		list.addAtNthPos(list, 30, 2);
 		list.displayNode(list);
-		list.searchElement(30);
+		list.addAtNthPos(list, 40, 3);
+		list.displayNode(list);
 	}
 }
