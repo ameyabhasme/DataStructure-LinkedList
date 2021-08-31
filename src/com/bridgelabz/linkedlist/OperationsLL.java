@@ -87,7 +87,7 @@ public class OperationsLL implements OperationsInterface {
 			last.next = null;
 		}
 	}
-	
+
 	@Override
 	public void searchElement(int data) {
 		Node n = head;
@@ -124,7 +124,7 @@ public class OperationsLL implements OperationsInterface {
 			temp.next = null;
 		}
 	}
-	
+
 	@Override
 	public int getSize() {
 		int count = 1;
@@ -137,5 +137,30 @@ public class OperationsLL implements OperationsInterface {
 			}
 		}
 		return count;
+	}
+
+	@Override
+	public void sortList() {
+		Node current = head, index = null;
+		int temp;
+
+		if (head == null) {
+			System.out.println("List is Empty.");
+			return;
+		} else {
+			while (current != null) {
+				index = current.next;
+				while (index != null) {
+					if (current.data > index.data) {
+						temp = current.data;
+						current.data = index.data;
+						index.data = temp;
+					}
+
+					index = index.next;
+				}
+				current = current.next;
+			}
+		}
 	}
 }

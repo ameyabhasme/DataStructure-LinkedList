@@ -11,7 +11,7 @@ public class MyLinkedList {
 		list.displayNode(list);
 		list.addAtNthPos(list, 40, 3);
 		list.displayNode(list);
-		list.deleteAtNthPos(3);
+		list.sortList();
 		list.displayNode(list);
 
 		System.out.println("The size of LinkedList is " + list.getSize());

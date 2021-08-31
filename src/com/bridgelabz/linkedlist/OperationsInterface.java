@@ -19,5 +19,7 @@ public interface OperationsInterface {
 	public void deleteAtNthPos(int pos);
 	
 	public int getSize();
+	
+	public void sortList();
 
 }
