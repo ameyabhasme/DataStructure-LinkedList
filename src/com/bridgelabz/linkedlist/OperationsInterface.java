@@ -7,5 +7,7 @@ public interface OperationsInterface {
 	public void displayNode(OperationsInterface list);
 	
 	public OperationsInterface addLast(OperationsInterface list, int data);
+	
+	public OperationsInterface addAtNthPos(OperationsInterface list, int data, int pos);
 
 }

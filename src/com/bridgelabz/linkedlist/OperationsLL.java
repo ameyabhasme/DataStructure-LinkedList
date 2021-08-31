@@ -43,4 +43,22 @@ public class OperationsLL implements OperationsInterface {
 		}
 		return list;
 	}
+
+	@Override
+	public OperationsInterface addAtNthPos(OperationsInterface list, int data, int pos) {
+		Node newNode = new Node(data);
+		int counter = 1;
+		if (head == null) {
+			head = newNode;
+		} else if (counter <= pos) {
+			Node temp = head;
+			while (temp.next != null && counter < pos - 1) {
+				counter++;
+				temp = temp.next;
+			}
+			newNode.next = temp.next;
+			temp.next = newNode;
+		}
+		return list;
+	}
 }
