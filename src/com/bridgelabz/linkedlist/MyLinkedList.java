@@ -9,7 +9,6 @@ public class MyLinkedList {
 		list.addLast(list, 70);
 		list.addAtNthPos(list, 30, 2);
 		list.displayNode(list);
-		list.deleteLast();
-		list.displayNode(list);
+		list.searchElement(30);
 	}
 }

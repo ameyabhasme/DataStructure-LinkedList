@@ -13,5 +13,7 @@ public interface OperationsInterface {
 	public void deleteFirst();
 	
 	public void deleteLast();
+	
+	public void searchElement(int data);
 
 }

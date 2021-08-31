@@ -87,4 +87,23 @@ public class OperationsLL implements OperationsInterface {
 			last.next = null;
 		}
 	}
+	
+	@Override
+	public void searchElement(int data) {
+		Node n = head;
+		int count = 1;
+		int flag = 0;
+		while (n != null) {
+			if (n.data == data) {
+				flag = 1;
+				break;
+			}
+			count = count + 1;
+			n = n.next;
+		}
+		if (flag == 1)
+			System.out.println("Node with value " + data + " is found at position " + count + ".");
+		else
+			System.out.println("Element is not present in the list.");
+	}
 }
