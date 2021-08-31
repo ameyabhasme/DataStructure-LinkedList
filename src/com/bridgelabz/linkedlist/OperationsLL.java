@@ -61,4 +61,15 @@ public class OperationsLL implements OperationsInterface {
 		}
 		return list;
 	}
+
+	@Override
+	public void deleteFirst() {
+		if (head == null) {
+			System.out.println("List is Empty.");
+		} else {
+			Node temp = head;
+			head = temp.next;
+			temp.next = null;
+		}
+	}
 }
