@@ -106,4 +106,36 @@ public class OperationsLL implements OperationsInterface {
 		else
 			System.out.println("Element is not present in the list.");
 	}
+
+	@Override
+	public void deleteAtNthPos(int pos) {
+		int counter = 1;
+		if (head == null) {
+			System.out.println("List is Empty.");
+		} else if (counter <= pos) {
+			Node temp = head;
+			Node last = head;
+			while (temp.next != null && counter < pos) {
+				counter++;
+				last = temp;
+				temp = temp.next;
+			}
+			last.next = temp.next;
+			temp.next = null;
+		}
+	}
+	
+	@Override
+	public int getSize() {
+		int count = 1;
+		if (head == null) {
+			System.out.println("List is Empty.");
+		} else {
+			Node temp;
+			for (temp = head; temp.next != null; temp = temp.next) {
+				count++;
+			}
+		}
+		return count;
+	}
 }
