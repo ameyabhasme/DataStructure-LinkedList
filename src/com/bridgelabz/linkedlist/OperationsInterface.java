@@ -5,5 +5,7 @@ public interface OperationsInterface {
 	public OperationsInterface addFirst(OperationsInterface list, int data);
 
 	public void displayNode(OperationsInterface list);
+	
+	public OperationsInterface addLast(OperationsInterface list, int data);
 
 }

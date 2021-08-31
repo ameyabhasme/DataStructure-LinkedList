@@ -28,4 +28,19 @@ public class OperationsLL implements OperationsInterface {
 			System.out.println("\n");
 		}
 	}
+
+	@Override
+	public OperationsInterface addLast(OperationsInterface list, int data) {
+		Node newNode = new Node(data);
+		Node temp = head;
+		if (head == null) {
+			head = newNode;
+		} else {
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = newNode;
+		}
+		return list;
+	}
 }
